@@ -31,6 +31,8 @@ namespace Rozdzial4
             Console.WriteLine(tekst);
         }
 
+
+
         public static int M(int g) => g + 4;
 
         public delegate T delegata<T>(T arg);  //Delegat ma tyle samo arg co metoda, Tworzymy delegat, nastepnie metode generyczna ktora 
@@ -115,36 +117,42 @@ namespace Rozdzial4
             String[] txt = null;
             Dictionary<String, int> dict = new Dictionary<string, int>();
             string line;
-            
+
 
 
             using (StreamReader sr = new StreamReader("C:\\aaa\\plik.txt"))
-            {                            
+            {
                 txt = sr.ReadToEnd().Split();
             };
-            
+
 
             for (int i = 0; i < txt.Length; i++)
             {
                 if (!txt[i].Equals(' '))
                 {
                     dict.TryAdd(txt[i], 1);
-                    
+
                 }
             }
 
-            
+
 
             foreach (var el in dict)
             {
                 Console.WriteLine(el.Key + "\t" + el.Value);
                 Console.WriteLine();
-               
+
             }
 
-
+           string piec = ProbnaMetoda();
 
             Console.ReadKey();
+        }
+
+        private static string ProbnaMetoda()
+        {
+            return "";
+            throw new NotImplementedException();
         }
     }
 }
