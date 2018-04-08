@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace Rozdzial4
 {
-    class Program
+    static class Program
     {
         public delegate int Delegat(int a, int b);
 
@@ -120,8 +120,7 @@ namespace Rozdzial4
 
             using (StreamReader sr = new StreamReader("C:\\aaa\\plik.txt"))
             {                            
-                txt = sr.ReadToEnd().Split();                
-
+                txt = sr.ReadToEnd().Split();
             };
             
 
